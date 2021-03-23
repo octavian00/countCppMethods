@@ -44,17 +44,13 @@ fun main (args: Array<String>){
 
     val list: MutableList<Property> = LinkedList()
     for(file in cppFiles){
-        println(file.toAbsolutePath().toString().substring(countLength))
         list.add(Property(file.toAbsolutePath().toString().substring(countLength),"Number of Methods","Methods",countMehods(file.toString())))
-
     }
 
     val gson = GsonBuilder().setPrettyPrinting().create()
     val jsonList: String = gson.toJson(list)
-    println(jsonList)
     File("Methods.json").printWriter().use{ out ->
         out.print(jsonList)
-
     }
 
 }

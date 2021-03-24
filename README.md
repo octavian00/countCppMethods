@@ -1,9 +1,15 @@
-#MECO
-This plugin counts methods from cpp files and put the result in a json file which can be uploaded in dxPlatform
+# MECO
+Meco is a open source project, a tool that parse a directory, counts methods from each cpp file and put the result in a json file which can be uploaded as property file in dxPlatform
 
-##Installing
+## Technologies
+We use Kotlin as programming language to build this tool. For obtain number of methods we use ctags tool and for write data in a pretty JSON format,
+GSON help us.
+Ctags is a programming tool that generates an index file of names found in source files and header files of various programming languages.
+Depending on the language, functions, variables, class members, macros and so on may be indexed.
 
-###From Github
+## Installing
+
+### From Github
 To install Meco from Github, please download meco.zip from the [latest_release](https://github.com/octavian00/countCppMethods/releases/tag/v1)
 
 The contains from the archive are:
@@ -14,15 +20,15 @@ Or you can download source code from [here](https://github.com/octavian00/countC
 
 Run `mvn clean install` in the folder from archive
 
-###From Code
+### From Code
 Clone the repository from [here](https://github.com/octavian00/countCppMethods)
 
 Run `mvn clean install` in /countCppMethods 
 
 
-##Running the tool
+## Running the tool
 
-###Running with docker
+### Running with docker
 We have created a docker image `octavianvilceanu/countcppmehtodsv1`
 
 For running the tool with docker you must have instaled docker on your machine and paste following command
@@ -41,11 +47,11 @@ docker run -v YourPathForTheProject:/workspace/project -v YourPathForResults/Met
  
  Method.json is the file when the docker puts the output. It is necessary to create the blank file which have the name Methods.json
  
-###Running with linux
+### Running with linux
  
  First of all you must have installed jdk and ctags
  
- ####jdk 11  on ubuntu 
+ #### jdk 11  on ubuntu 
  ```bash
 apt update
 apt upgrade
@@ -66,9 +72,9 @@ java -jar ces-count-cpp-methods.jar DirectoryForProjectWhichYouWantToAnalyze
 
 In the directory where you executed the command, you will see a file named Methods.json which contains de results 
 
-##Results
+## Results
 
-Once you have some dates the Methods.json file you can upload on dxPlatform
+Once you have some dates the Methods.json file you can upload on dxPlatform as property file.
 
 The Methods.json file looks like:
 
@@ -88,3 +94,12 @@ The Methods.json file looks like:
   },
 ]
 ```
+
+##Contribute
+We are close to collaborations.
+
+##Credits
+Thanks to Ken Arnold for developing the ctags. We used this usage to get the number of methods in the cpp files.
+
+##License 
+[MIT](https://choosealicense.com/licenses/mit/)

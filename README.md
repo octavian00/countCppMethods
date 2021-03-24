@@ -2,9 +2,9 @@
 Meco is a open source project, a tool that parse a directory, counts methods from each cpp file and put the result in a json file which can be uploaded as property file in dxPlatform
 
 ## Technologies
-We use Kotlin as programming language to build this tool. For obtain number of methods we use ctags tool and for write data in a pretty JSON format,
+We use Kotlin as programming language to build this tool. For obtain number of methods we use universal ctags tool and for write data in a pretty JSON format,
 GSON help us.
-Ctags is a programming tool that generates an index file of names found in source files and header files of various programming languages.
+[Universal ctags](https://ctags.io/) is a maintained implementation of ctags. Ctags is a programming tool that generates an index file of names found in source files and header files of various programming languages.
 Depending on the language, functions, variables, class members, macros and so on may be indexed.
 
 ## Installing
@@ -95,11 +95,16 @@ The Methods.json file looks like:
 ]
 ```
 
-##Contribute
+## Contribute
 We are close to collaborations.
 
-##Credits
-Thanks to Ken Arnold for developing the ctags. We used this usage to get the number of methods in the cpp files.
+## Credits
+Thanks to Ken Arnold for developing the ctags and to team that maintain [universal ctags](https://github.com/universal-ctags/ctags). We used this tool to get the number of methods in the cpp files.
 
-##License 
-[MIT](https://choosealicense.com/licenses/mit/)
+## Contact
+Contact us for additional help:
+vilceanu_octavian@yahoo.com
+radutit@yahoo.com
+
+## License 
+[GNU GPL](https://choosealicense.com/licenses/gpl-2.0/)
